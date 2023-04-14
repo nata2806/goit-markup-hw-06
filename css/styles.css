@@ -584,6 +584,18 @@ body {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 250ms linear;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .modal {
   position: absolute;
   top: 50%;
@@ -661,11 +673,9 @@ body {
   outline: transparent;
   border-radius: 4px;
 }
-
 .modal-input:focus {
   border-color: var(--main-logo);
 }
-
 .modal-input:focus + .modal-icon {
   fill: var(--main-logo);
 }
@@ -700,35 +710,38 @@ body {
   color: #2e2f42;
   padding-left: 16px;
   padding-top: 8px;
+  margin-bottom: 16px;
+}
+.user-comment:focus {
+  border-color: var(--main-logo);
+}
+.modal-field {
+  margin-bottom: 24px;
 }
 .accept-label {
   font-size: 12px;
   display: flex;
   align-items: center;
 }
-.accept-label::before {
-  content: "";
+.accept-label span {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  margin-bottom: 24px;
-  gap: 8px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
-/* .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
-
-/* 
+.input-accept:checked + .accept-label span {
+  background-color: #404bbf;
+  border: none;
+  fill: var(--studio-footer);
+}
+.input-accept:focus + .accept-label span {
+  border-color: var(--main-logo);
+}
 .form-label {
   margin-bottom: 4px;
   font-weight: 400;
@@ -736,12 +749,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--color-subtle-text);
-} */
-/*
-.input-accept {
 }
-
-} */
 .modal-button {
   background: var(--main-logo);
   color: var(--second-title-color);
