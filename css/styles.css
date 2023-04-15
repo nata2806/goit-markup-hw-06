@@ -714,11 +714,11 @@ body {
 .modal-input {
   width: 100%;
   min-height: 40px;
-  padding-left: 38px;
+
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: 8px 16px 8px 38px;
 }
 .modal-input:focus {
   border-color: var(--main-logo);
