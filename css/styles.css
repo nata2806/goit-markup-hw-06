@@ -549,7 +549,6 @@ body {
 .soc-media {
   margin-right: 80px;
 }
-
 .footer-soc-list {
   display: flex;
   justify-content: center;
@@ -561,7 +560,6 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .subscribe {
   display: block;
   margin-top: 0em;
@@ -573,9 +571,9 @@ body {
   transition: border var(--time-transition-duration)
     var(--transition-timing-function);
 }
-
 .input {
   background: transparent;
+  min-width: 216px;
   min-height: 40px;
   padding: 8px 16px;
   border: 1px solid;
@@ -696,12 +694,11 @@ body {
 .form-grop {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
   position: relative;
+  margin-bottom: 8px;
 }
 .form-label {
   display: inline-block;
-  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -713,12 +710,12 @@ body {
 }
 .modal-input {
   width: 100%;
-  height: 40px;
+  min-height: 40px;
   padding-left: 38px;
-  margin-bottom: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
   border-radius: 4px;
+  padding: 8px 16px;
 }
 .modal-input:focus {
   border-color: var(--main-logo);
@@ -741,8 +738,9 @@ body {
   position: absolute;
   left: 16px;
   bottom: 50%;
-  transform: translateY(40%);
+  transform: translateY(50%);
 }
+
 .user-comment {
   width: 100%;
   height: 100px;
@@ -796,6 +794,10 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--color-subtle-text);
+}
+.policy {
+  margin-left: 4px;
+  color: #4d5ae5;
 }
 .modal-button {
   background: var(--main-logo);
